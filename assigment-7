@@ -1,0 +1,142 @@
+void main() {
+
+
+// Q1. Write a program that prints the
+// Fibonacci sequence up to a given number using a for loop.
+
+// Example:
+// Input:
+// 10
+
+// Output:
+// 0 1 1 2 3 5 8
+
+  int n = 10; // Change this value to your desired number
+  print("Fibonacci sequence up to $n:");
+  
+  int first = 0;
+  int second = 1;
+  
+  print("$first"); // Print the first number of the sequence
+  
+  if (n >= 2) {
+    print("$second"); // Print the second number of the sequence
+  }
+  
+  // Generate and print the rest of the sequence
+  for (int i = 2; i < n; i++) {
+    int next = first + second;
+    if (next <= n) {
+      print("$next");
+      first = second;
+      second = next;
+    } else {
+      break;
+    }
+  }
+
+// Q2.  Implement a code that finds the
+// largest element in a list using a for loop.
+
+// Example:
+// Input:
+// [3, 9, 1, 6, 4, 2, 8, 5, 7]
+
+// A2
+List<int> numbers = [3, 9, 1, 6, 4, 2, 8, 5, 7]; // Change this list to your desired input
+  
+  int largest = numbers[0]; // Assume the first element is the largest
+  
+  // Iterate through the list to find the largest element
+  for (int i = 1; i < numbers.length; i++) {
+    if (numbers[i] > largest) {
+      largest = numbers[i];
+    }
+  }
+  
+  print("The largest element in the list is: $largest");
+
+// Q3. Write a program that prints the
+// multiplication table of a given number using a for loop.
+
+// Example: Input: 5
+
+// Output:
+// 5 x 1= 5
+
+// 5 x 2= 10
+
+// 5 x 3= 15
+// ...
+// ...
+// ...
+// 5 x 10 = 50
+// A:3
+
+int number = 5; // Change this value to your desired number
+  
+  print("Multiplication table of $number:");
+  
+  // Iterate through numbers from 1 to 10 and print the multiplication table
+  for (int i = 1; i <= 10; i++) {
+    int result = number * i;
+    print("$number x $i = $result");
+  }
+
+bool isPalindrome(String str) {
+  int start = 0;
+  int end = str.length - 1;
+
+  // Iterate until start pointer is less than end pointer
+  while (start < end) {
+    // If characters at start and end positions are not equal, it's not a palindrome
+    if (str[start] != str[end]) {
+      return false;
+    }
+    // Move start pointer forward and end pointer backward
+    start++;
+    end--;
+  }
+
+  // If loop completes without returning false, it's a palindrome
+  return true;
+}
+
+  String input = "radar"; // Change this string to test with different inputs
+
+  if (isPalindrome(input)) {
+    print('"$input" is a palindrome.');
+  } else {
+    print('"$input" is not a palindrome.');
+  }
+
+  List<int> numbers = [2, 7, 4, 9, 3, 6, 8]; // Change this list to your desired input
+  
+  
+  // Iterate through the list of numbers
+  for (int i = 0; i < numbers.length; i++) {
+    // Check if the current number is greater than 5
+    if (numbers[i] > 5) {
+      print(numbers[i]); // Print the number if it's greater than 5
+    }
+  }
+  print("Numbers greater than 5:");
+
+  List<int> numbers = [2, 7, 4, 9, 3, 6, 8]; // Change this list to your desired input
+  
+  print("Numbers greater than 5:");
+  
+  // Iterate through the list of numbers
+  for (int i = 0; i < numbers.length; i++) {
+    // Check if the current number is greater than 5
+    if (numbers[i] > 5) {
+      print(numbers[i]); // Print the number if it's greater than 5
+    }
+  }
+}
+
+
+
+
+
+
